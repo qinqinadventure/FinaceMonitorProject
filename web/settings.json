@@ -1,0 +1,8 @@
+{
+    "DEBUG":true,
+    "SECRET_KEY":'secret',
+    ROOT_URLCONF:__name__,
+    ALLOWED_HOSTS:['*'],
+    INSTALLED_APPS:[],
+    MIDDLEWARE:[],
+}
