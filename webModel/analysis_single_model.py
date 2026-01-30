@@ -9,4 +9,3 @@ class singleItem(BaseModel):
     # 获取股票号码
     def getStockCode(self):
         return self.stock_code
-    

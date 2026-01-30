@@ -6,8 +6,10 @@ import const.config_const as config
 def getDayKline(stock_code):
     # 获取配置
     cfg = json.loads(config.setting_path)
-    # 获取
-    dayKline = kdata.get_daily_kline(stock_code,)
+    # 获取初始的窗口大小
+
+    # 获取k线
+    dayKline = kdata.get_daily_kline(stock_code,cfg['start_date'],cfg['end_date'])
 
 # 获取近五日线
 def getFiveDayKline(line_data):

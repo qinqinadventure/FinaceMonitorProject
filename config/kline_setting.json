@@ -1,0 +1,22 @@
+{
+  "klines": {
+    "day": {
+      "init_window": {
+        "value": 30,
+        "description": "日线初始窗口大小"
+      }
+    },
+    "week": {
+      "init_window": {
+        "value": 30,
+        "description": "周线初始窗口大小"
+      }
+    },
+    "month": {
+      "init_window": {
+        "value": 30,
+        "description": "年线初始窗口大小"
+      }
+    }
+  }
+}

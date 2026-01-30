@@ -46,3 +46,8 @@ def getData(stock_code="000001", days=1000):
     except Exception as e:
         print(f"获取数据时出错: {e}")
         return pd.DataFrame()
+
+
+if __name__ == "__main__":
+    data = getData()
+    pass
