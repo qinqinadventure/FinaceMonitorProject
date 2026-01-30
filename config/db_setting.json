@@ -1,0 +1,22 @@
+{
+    "host": {
+      "value": "localhost",
+      "description": "数据库服务器地址"
+    },
+    "port": {
+      "value": 3306,
+      "description": "数据库服务器端口"
+    },
+    "user": {
+      "value": "root",
+      "description": "数据库用户名"
+    },
+    "password": {
+      "value": "123456",
+      "description": "数据库密码"
+    },
+    "name": {
+      "value": "finace",
+      "description": "要连接的数据库名称"
+    }
+}

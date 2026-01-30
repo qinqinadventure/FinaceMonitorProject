@@ -1,0 +1,14 @@
+{
+  "host": {
+    "value": "0.0.0.0",
+    "description": "运行主机地址"
+  },
+  "post": {
+    "value": 8000,
+    "description": "运行主机端口"
+  },
+  "reload": {
+    "value": true,
+    "description": "开发模式，代码修改即重启"
+  }
+}

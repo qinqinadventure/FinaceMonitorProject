@@ -1,7 +1,10 @@
+import json
+import tools.fileTools as fileTools
 import pymysql
 import pymysql.cursors
 from pymysql.cursors import DictCursor
 import logging
+import const.config_const as config
 
 # 配置日志，便于记录错误信息
 logging.basicConfig(level=logging.ERROR)
@@ -47,8 +50,16 @@ def executeSQL(sql, params=None, max_retries=3):
 
     while retries <= max_retries:
         try:
+            # 获取配置文件内容
+            db_cfg = fileTools.jsonToDict(config.db_setting_path)
             # 尝试建立数据库连接
-            connection = getSqlConnect()  # 假设这是您获取连接的函数
+            connection = getSqlConnect(
+                host=db_cfg['localhost'],  # 数据库服务器地址
+                user=db_cfg['root'],  # 数据库用户名
+                password=db_cfg['123456'],  # 数据库密码
+                database=db_cfg['finace'],  # 要连接的数据库名称
+                port=db_cfg['port'],  # 端口号，默认为3306
+            )  # 假设这是您获取连接的函数
             with connection.cursor(cursor=DictCursor) as cursor:  # 使用字典游标
                 cursor.execute(sql, params)  # 使用参数化查询，防止SQL注入
 

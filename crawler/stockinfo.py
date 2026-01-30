@@ -1,5 +1,5 @@
 import akshare as ak
-import datetime
+from datetime import datetime
 import pandas as pd
 
 # 根据股票代码获取股票信息
