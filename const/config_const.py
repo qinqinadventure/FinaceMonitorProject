@@ -1,0 +1,1 @@
+setting_path = "D:\project\pycharm\FinaceMonitorProject\config\settings.json"

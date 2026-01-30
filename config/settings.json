@@ -1,0 +1,42 @@
+{
+  "stock_code":{
+    "value": "002304",
+    "description": "待分析股票代码"
+  },
+  "press_level": {
+    "history_days": {
+        "value": 2000,
+        "description": "历史分位判断"
+    },
+    "quantity_days": {
+        "value": 20,
+        "description": "量比分析天数"
+    },
+    "analysis_target": {
+        "value": ["成交量","涨跌幅/成交量"],
+        "description": "待分析指标"
+    }
+  },
+  "fresh_config": {
+    "single": {
+      "fresh_interval": {
+      "value":"1",
+      "description": "间隔时间数值"
+    },
+    "fresh_unit": {
+      "value": "min",
+      "description": "间隔时间单位"
+    }
+    },
+    "all": {
+      "fresh_interval": {
+      "value":"1",
+      "description": "间隔时间数值"
+    },
+    "fresh_unit": {
+      "value": "min",
+      "description": "间隔时间单位"
+    }
+    }
+  }
+}
