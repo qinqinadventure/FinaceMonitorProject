@@ -1,7 +1,6 @@
 import analysis.analysis_level_func.level as level
 from datetime import datetime
 
-
 def outputLevelInfo(stock_data, valuation_data=None, current_pe=None, current_pb=None):
     """
     返回完整的股票分析信息（结构化字典格式）

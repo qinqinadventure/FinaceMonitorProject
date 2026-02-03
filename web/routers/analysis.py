@@ -25,4 +25,5 @@ async def analysis_multi(item:analysis_multi_model.MultiItem):
 # 分析所有股票接口并获取告警
 async def alarm_all():
     print("alarm_all post...")
-    pass
+    result = analysisService.alarm_all()
+    return result

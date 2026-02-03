@@ -1,0 +1,6 @@
+{
+  "num_workers": {
+    "value": 12,
+    "description": "爬取分析的时候同时运行的进程/线程数量"
+  }
+}

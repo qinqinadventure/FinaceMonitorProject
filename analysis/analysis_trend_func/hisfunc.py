@@ -2,9 +2,10 @@ import json
 import pandas as pd
 import numpy as np
 from datetime import datetime
+from tools.fileTools import jsonToDict
 
 # 获取配置
-cfg = json.load("config/press_setting.json")
+cfg = jsonToDict("config/press_setting.json")
 
 def _calculate_recent_metrics(quantity_data, column_name, current_value):
     """计算近期指标"""

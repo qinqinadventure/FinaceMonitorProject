@@ -1,7 +1,20 @@
-import analysis.analysis_press_func.hisfunc as hisfunc
+import analysis.analysis_trend_func.hisfunc as hisfunc
 from datetime import datetime
+import crawler.stockdata as stockdata
+import tools.fileTools as fileTools
 
-def outputHisAnalysis(history_data, quantity_data, analysis_target):
+def outputHisAnalysis(stock_code):
+    # 加载配置
+    # 使用原始字符串避免转义问题
+    analysis_cfg = fileTools.jsonToDict("D:\project\pycharm\FinaceMonitorProject\config\\analysis_setting.json")
+    # 获取关键参数
+    history_days = analysis_cfg["history_days"]["value"]
+    quantity_days = analysis_cfg["quantity_days"]["value"]
+    analysis_target = analysis_cfg["analysis_target"]["value"]
+    # 获取数据
+    history_data = stockdata.getData(stock_code, history_days)
+    quantity_data = stockdata.getData(stock_code, quantity_days)
+    analysis_target = None
     """
     历史分位分析结果输出函数 - 返回字典格式便于前端使用
     Returns:
